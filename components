@@ -25,3 +25,22 @@ Bootstrap array - add components to be loaded. Needs to be declared to use acros
 Export Array - export components, directives, pipes to use in other modules
 Import array - import functionality from other Angular modules
 /*
+// Linking with HTML
+// Angular code
+import { Component } from '@angular/core';
+
+@Component ({
+   selector: 'my-app',
+   template: ` <div>
+      <h1>{{appTitle}}</h1>
+      <div>To Tutorials Point</div>
+   </div> `,
+})
+
+export class AppComponent {
+   appTitle: string = 'Welcome';
+}
+// reference in HTML
+<body>
+   <my-app></my-app>
+</body>
