@@ -30,3 +30,33 @@
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
     vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 </script>
+
+<!-- Python Outputs -->
+Study Spaces
+
+Bevier Engineering Library<br />
+Chemistry Library<br />
+Chevron Science Center, Room 132  - (capacity: 11)<br />
+Cathedral of Learning Lawn Tent<br />
+Frick Fine Arts Library<br />
+Gardner Steel Conference Center, Room 138 - (capacity: 28)<br />
+Hillman Library<br />
+Langley Library<br />
+Lawrence Hall, Room 104 - (capacity: 16)<br />
+Learning Research & Development Center, Room 203 - (capacity: 24)<br />
+Thackeray Hall, Room 106 - (capacity: 16)<br />
+University Club, Room 122 - (capacity: 70)<br />
+Posvar Hall - 2nd Floor<br />
+Click <a href=https://www.coronavirus.pitt.edu/student-learning-living/study-spaces>here</a> for more information, including hours.
+
+Risk Postures
+
+<p><strong>Guarded Risk</strong><br />
+Greensburg<br />
+Titusville<br />
+<strong>Elevated Risk</strong><br />
+Pittsburgh<br />
+Johnstown<br />
+Bradford<br />
+<strong>High Risk</strong><br />
+None
