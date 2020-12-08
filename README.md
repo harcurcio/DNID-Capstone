@@ -1,2 +1,2 @@
 # DNID-Capstone
-COVID Dashboard for Pitt Students
+CS 1902 Capstone Project in Fall 2020 by Arun Mohan and Harlie Curcio. A COVID-19 Dashboard specific to the University of Pittsburgh students that shows the current risk postures for each campus, open study spaces, cases by county, and cases by state. Along with the dashboard is a FAQ page that addresses questions not touched upon by the home page. Between these two pages, we think we will provide Pitt students will the answers to all their COVID related questions.
