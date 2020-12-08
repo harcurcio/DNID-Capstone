@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
+    <body onload ="goPython()">
         <header>
             <div class="navbar">
                 <div class="container d-flex justify-content-between">
@@ -51,7 +51,7 @@
                                 Pitt Risk Posture  
                             </div>
                             <div class="card-body posture">
-                                <p class="card-text">
+                                <p id="pos">
                                     
                                 </p>
                             </div>
@@ -64,7 +64,7 @@
                                 Study Spaces and Capacities 
                             </div>
                             <div class="card-body study">
-                                <p class="card-text">
+                                <p id="stu">
                                     
                                 </p>
                             </div>
@@ -144,5 +144,44 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <!-- jquery function that uses AJAX to call python script for web-scraping -->
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script>
+             function goPython() {
+                $.ajax({
+                    url: "scraper.py",
+                    success: function(){
+                    }
+                 });
+             }
+        </script>
+        <!-- js function that reads data from files created by web-scraping -->
+        <script>
+            var txtFile = new XMLHttpRequest();
+            var allText = "file not found";
+            txtFile.onreadystatechange = function () {
+            if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
+                allText = txtFile.responseText;
+                allText = allText.split("\n").join("<br>");
+            }
+
+             document.getElementById('pos').innerHTML = allText;
+            }
+            txtFile.open("GET", 'posture.txt', true);
+            txtFile.send(null);
+        
+            var txtFile2 = new XMLHttpRequest();
+            var allText2 = "file not found";
+            txtFile2.onreadystatechange = function () {
+            if (txtFile2.readyState === XMLHttpRequest.DONE && txtFile2.status == 200) {
+                allText2 = txtFile2.responseText;
+                allText2 = allText2.split("\n").join("<br>");
+            }
+
+             document.getElementById('stu').innerHTML = allText2;
+            }
+            txtFile2.open("GET", 'study.txt', true);
+            txtFile2.send(null);
+        </script>
     </body>
 </html>
